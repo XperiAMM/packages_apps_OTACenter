@@ -70,7 +70,7 @@
     <string name="short_cut_download_gapps_summary">Download latest Gapps package</string>
 
     <!-- Update checker -->
-    <string name="xml_url">http://resurrectionremix-ota-server.github.io/ota.xml</string>
+    <string name="xml_url">http://maxicm-ota-server.github.io/ota.xml</string>
     <string name="notification_message">ROM update available</string>
 
     <!-- About -->
@@ -83,16 +83,16 @@
     <string name="donate_title">Donate</string>
     <string name="donate_summary">Donate</string>
     <string name="source_title">Source</string>
-    <string name="source_summary">github.com/ResurrectionRemix</string>
-    <string name="center_summary"><b>OTACenter</b> provides tools &amp; information to help make your experience with ResurrectionRemix even better. Upgrade to the newest version of our ROM with <b>OTACenter</b>.</string>
+    <string name="source_summary">github.com/MaxiCM</string>
+    <string name="center_summary"><b>OTACenter</b> provides tools &amp; information to help make your experience with MaxiCM even better. Upgrade to the newest version of our ROM with <b>OTACenter</b>.</string>
     <string name="bugreport_title">Bugreport</string>
     <string name="bugreport_summary">Create a complete bugreport</string>
-    <string name="report_infosuccess">Created a system report, provide it to ResurrectionRemix. You can find the Zip file on your SD-Card in a directory called \"BugReport\".</string>
+    <string name="report_infosuccess">Created a system report, provide it to MaxiCM. You can find the Zip file on your SD-Card in a directory called \"BugReport\".</string>
     <string name="report_infofail">Failed to create Bugreport, please try again.</string>
 
-    <string name="about_home_url"><a href="http://resurrectionremix.com/">ResurrectionRemix Website</a></string>
+    <string name="about_home_url"><a href="http://MaxiCM.com/">MaxiCM Website</a></string>
     <string name="about_ota">OTACenter allows you to easily manage\n your ROM!</string>
-    <string name="about_copyright">\u00A9 Copyright Slimroms 2013 modifed for ResurrectionRemix</string>
+    <string name="about_copyright">\u00A9 Copyright Slimroms 2013 modifed for MaxiCM</string>
     <string name="about_version">OTACenter 2.0</string>
     <string name="about_contact">Contact us</string>
     <string name="about_contact_text">Tell us what you think\nor let us know about a bug or problem</string>

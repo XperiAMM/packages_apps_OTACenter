@@ -14,7 +14,7 @@
  *=========================================================================
  */
 
-package com.rr.ota.updater;
+package com.maxi.ota.updater;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -42,8 +42,8 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.rr.center.OTACenter;
-import com.rr.ota.R;
+import com.maxi.center.OTACenter;
+import com.maxi.ota.R;
 
 public class UpdateChecker extends AsyncTask<Context, Integer, String> {
     private static final String TAG = "UpdateChecker";
@@ -106,9 +106,9 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
                 String[] line = strLine.split("=");
                 if (line[0].equalsIgnoreCase("ro.product.device")) {
                     strDevice = line[1].trim();
-                } else if (line[0].equalsIgnoreCase("rr.ota.version")) {
+                } else if (line[0].equalsIgnoreCase("maxi.ota.version")) {
                     CurVer = line[1].trim();
-                } else if (strDevice == null && line[0].equalsIgnoreCase("ro.cm.device")){
+                } else if (strDevice == null && line[0].equalsIgnoreCase("ro.maxi.device")){
                     strDevice = line[1].trim();
                 }
             }

@@ -14,7 +14,7 @@
  *=========================================================================
  */
 
-package com.rr.ota;
+package com.maxi.ota;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -38,12 +38,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.rr.ota.updater.UpdateChecker;
-import com.rr.ota.updater.UpdateListener;
-import com.rr.ota.settings.Settings;
+import com.maxi.ota.updater.UpdateChecker;
+import com.maxi.ota.updater.UpdateListener;
+import com.maxi.ota.settings.Settings;
 import com.commonsware.cwac.wakeful.WakefulIntentService;
 
-public class RROTA extends PreferenceFragment implements OnSharedPreferenceChangeListener {
+public class MaxiOTA extends PreferenceFragment implements OnSharedPreferenceChangeListener {
 
     private static final int ID_DEVICE_NAME = R.id.deviceName;
     private static final int ID_DEVICE_CODE_NAME = R.id.deviceCodename;
@@ -67,7 +67,7 @@ public class RROTA extends PreferenceFragment implements OnSharedPreferenceChang
 
     SharedPreferences prefs;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.rr_ota, container, false);
+        View view = inflater.inflate(R.layout.maxi_ota, container, false);
         return view;
     }
 
@@ -149,11 +149,11 @@ public class RROTA extends PreferenceFragment implements OnSharedPreferenceChang
                 String[] line = strLine.split("=");
                 if (line[0].equalsIgnoreCase("ro.product.device")) {
                     mStrCodename = line[1];
-                } else if (line[0].equalsIgnoreCase("rr.ota.version")) {
+                } else if (line[0].equalsIgnoreCase("maxi.ota.version")) {
                     mStrCurVer = line[1];
                 } else if (line[0].equalsIgnoreCase("ro.product.model")) {
                     mStrDevice = line[1];
-                } else if (line[0].equalsIgnoreCase("ro.cm.display.version")) {
+                } else if (line[0].equalsIgnoreCase("ro.maxi.display.version")) {
                     mStrCurFile = line[1];
                 }
             }
@@ -194,7 +194,7 @@ public class RROTA extends PreferenceFragment implements OnSharedPreferenceChang
     private void addShortCutFragment() {
         FragmentManager fragmentManager = this.getActivity().getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        RRLinks Links = new RRLinks();
+        MaxiLinks Links = new MaxiLinks();
         fragmentTransaction.replace(R.id.linksFragment, Links);
         fragmentTransaction.commit();
     }

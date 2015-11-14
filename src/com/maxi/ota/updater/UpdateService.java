@@ -14,7 +14,7 @@
  *=========================================================================
  */
 
-package com.rr.ota.updater;
+package com.maxi.ota.updater;
 
 import android.content.Intent;
 import android.util.Log;

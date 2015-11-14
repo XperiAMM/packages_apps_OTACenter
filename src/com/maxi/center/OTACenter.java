@@ -13,13 +13,13 @@
  *
  *=========================================================================
  */
-package com.rr.center;
+package com.maxi.center;
 
 import java.util.Locale;
 
-import com.rr.ota.RROTA;
-import com.rr.ota.R;
-import com.rr.ota.settings.Settings;
+import com.maxi.ota.MaxiOTA;
+import com.maxi.ota.R;
+import com.maxi.ota.settings.Settings;
 
 import android.app.Activity;
 import android.app.FragmentManager;
@@ -36,14 +36,14 @@ public class OTACenter extends Activity {
         super.onCreate(savedInstanceState);
 
         getFragmentManager().beginTransaction().replace(android.R.id.content,
-                new RROTA()).commit();
+                new MaxiOTA()).commit();
         getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.rr_center, menu);
+        inflater.inflate(R.menu.maxi_center, menu);
         return true;
     }
 

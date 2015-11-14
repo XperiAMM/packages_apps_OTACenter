@@ -18,7 +18,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rr.ota"
+    package="com.maxi.ota"
     android:versionCode="1"
     android:versionName="1.2" >
 
@@ -38,7 +38,7 @@
         android:icon="@drawable/app_icon"
         android:launchMode="singleTask">
         <activity
-            android:name="com.rr.center.OTACenter"
+            android:name="com.maxi.center.OTACenter"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
             <intent-filter>
@@ -46,17 +46,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.rr.ota.RROTA"
+            android:name="com.maxi.ota.MaxiOTA"
             android:label="@string/ota_title"
-            android:parentActivityName="com.rr.center.OTACenter" >
+            android:parentActivityName="com.maxi.center.OTACenter" >
         </activity>
         <activity
-            android:name="com.rr.center.AboutRR"
+            android:name="com.maxi.center.AboutMaxi"
             android:label="@string/about_title"
-            android:parentActivityName="com.rr.center.OTACenter" >
+            android:parentActivityName="com.maxi.center.OTACenter" >
         </activity>
 
-        <service android:name="com.rr.ota.updater.UpdateService" />
+        <service android:name="com.maxi.ota.updater.UpdateService" />
 
         <receiver android:name="com.commonsware.cwac.wakeful.AlarmReceiver" >
             <intent-filter>
@@ -68,15 +68,15 @@
                 android:resource="@xml/wakeful" />
         </receiver>
         <receiver
-            android:name="com.rr.ota.updater.ConnectivityReceiver"
+            android:name="com.maxi.ota.updater.ConnectivityReceiver"
             android:enabled="false" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.rr.ota.settings.Settings" />
-        <activity android:name="com.rr.ota.settings.About" />
+        <activity android:name="com.maxi.ota.settings.Settings" />
+        <activity android:name="com.maxi.ota.settings.About" />
     </application>
 
 </manifest>

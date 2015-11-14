@@ -14,7 +14,7 @@
  *=========================================================================
  */
 
-package com.rr.ota.settings;
+package com.maxi.ota.settings;
 
 import android.app.AlarmManager;
 import android.content.SharedPreferences;
@@ -26,8 +26,8 @@ import android.preference.PreferenceActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.rr.ota.updater.UpdateListener;
-import com.rr.ota.R;
+import com.maxi.ota.updater.UpdateListener;
+import com.maxi.ota.R;
 
 import com.commonsware.cwac.wakeful.WakefulIntentService;
 
@@ -46,7 +46,7 @@ public class Settings extends PreferenceActivity implements
         super.onCreate(savedInstanceState);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        addPreferencesFromResource(R.xml.rr_ota_settings);
+        addPreferencesFromResource(R.xml.maxi_ota_settings);
 
         PreferenceScreen prefs = getPreferenceScreen();
 
@@ -102,7 +102,7 @@ public class Settings extends PreferenceActivity implements
             } else {
                 SharedPreferences prefs = getSharedPreferences(LAST_INTERVAL, 0);
                 prefs.edit().putLong(LAST_INTERVAL, 1).apply();
-                com.rr.ota.updater.ConnectivityReceiver.disableReceiver(this);
+                com.maxi.ota.updater.ConnectivityReceiver.disableReceiver(this);
                 WakefulIntentService.cancelAlarms(this);
             }
     }

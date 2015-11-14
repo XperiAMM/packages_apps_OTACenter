@@ -17,4 +17,4 @@
  *
 -->
 
-<WakefulIntentService listener="com.rr.ota.updater.UpdateListener" />
+<WakefulIntentService listener="com.maxi.ota.updater.UpdateListener" />

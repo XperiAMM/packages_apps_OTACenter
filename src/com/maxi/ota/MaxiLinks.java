@@ -14,9 +14,9 @@
  *=========================================================================
  */
 
-package com.rr.ota;
+package com.maxi.ota;
 
-import com.rr.ota.R;
+import com.maxi.ota.R;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -55,7 +55,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class RRLinks extends Fragment {
+public class MaxiLinks extends Fragment {
 
     private LinearLayout mDownload;
     private LinearLayout mChangelog;
@@ -94,7 +94,7 @@ public class RRLinks extends Fragment {
     byte[] buf = new byte[1024];
 
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.rr_ota_links, container, false);
+        View view = inflater.inflate(R.layout.maxi_ota_links, container, false);
         return view;
     }
 
@@ -106,16 +106,16 @@ public class RRLinks extends Fragment {
                         && mStrFileURLNew != "") {
                     launchUrl(mStrFileURLNew);
                 } else {
-                    launchUrl(getString(R.string.rr_download_url));
+                    launchUrl(getString(R.string.maxi_download_url));
                 }
             } else if (v == mChangelog) {
-                launchUrl(getString(R.string.rr_changelog_url));
+                launchUrl(getString(R.string.maxi_changelog_url));
             } else if (v == mDownloadGapps) {
-                launchUrl(getString(R.string.rr_gapps_url));
+                launchUrl(getString(R.string.maxi_gapps_url));
             } else if (v == mGoogleplus) {
-                launchUrl("https://plus.google.com/u/0/communities/109352646351468373340");
+                launchUrl("");
             } else if (v == mSource) {
-                launchUrl("http://github.com/ResurrectionRemix");
+                launchUrl("http://github.com/MaxiCM");
             } else if (v == mReport) {
                 bugreport();
             }
@@ -157,7 +157,7 @@ public class RRLinks extends Fragment {
             String strLine;
             while ((strLine = br.readLine()) != null) {
                 String[] line = strLine.split("=");
-                if (line[0].equals("rr.ota.version")) {
+                if (line[0].equals("maxi.ota.version")) {
                     mStrCurFile = line[1];
                 }
             }

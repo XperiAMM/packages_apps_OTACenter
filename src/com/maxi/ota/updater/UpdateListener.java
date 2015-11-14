@@ -14,7 +14,7 @@
  *=========================================================================
  */
 
-package com.rr.ota.updater;
+package com.maxi.ota.updater;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
